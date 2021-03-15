@@ -3,8 +3,8 @@ import { createGlobalStyle } from 'styled-components'
 // ____________________
 //
 export const theme = {
-  secondary: '#5e5086',
   primary: '#453a62',
+  secondary: '#9c79ff',
   white: '#fff',
   gray: '#eee',
   gray2: '#aaa',

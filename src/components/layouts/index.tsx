@@ -1,5 +1,5 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 
 import { Header } from '@/components/templates/Header'
 
@@ -11,6 +11,13 @@ export const Layout: React.FC = ({ children }) => (
   <ThemeProvider theme={theme}>
     <GlobalStyle {...theme} />
     <Header />
-    <main>{children}</main>
+    <_Main>{children}</_Main>
   </ThemeProvider>
 )
+
+// ___________
+//
+const _Main = styled.main`
+  margin: 1rem auto;
+  max-width: 1000px;
+`
