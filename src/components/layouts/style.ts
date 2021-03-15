@@ -16,8 +16,8 @@ export const theme = {
 
 export const GlobalStyle = createGlobalStyle<Theme>`
 body {
-  background-color: ${(p) => p.gray};
-  color: ${(p) => p.black};
+  background-color: ${(p) => p.primary};
+  color: ${(p) => p.gray};
   margin: 0px;
   font-family: Lato, Noto Sans JP, 游ゴシック Medium, 游ゴシック体,
   Yu Gothic Medium, YuGothic, ヒラギノ角ゴ ProN, Hiragino Kaku Gothic ProN,
