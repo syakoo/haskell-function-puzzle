@@ -12,11 +12,12 @@ type ChoiceProps = {
 // ___________
 //
 const Choice: React.VFC<ChoiceProps> = ({ txt }) => {
-  const [, drag] = useDrag(() => ({
+  const [, dragRef] = useDrag(() => ({
     type: 'CHOICE',
+    item: { txt },
   }))
 
-  return <_Block ref={drag}>{txt}</_Block>
+  return <_Block ref={dragRef}>{txt}</_Block>
 }
 
 // ___________
@@ -29,7 +30,7 @@ const _Block = styled.div`
   border-radius: 5px;
   background-color: ${(p) => p.theme.gray3};
   &:hover {
-    cursor: hand;
+    cursor: grab;
   }
 `
 
