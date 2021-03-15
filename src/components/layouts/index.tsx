@@ -1,4 +1,6 @@
 import React from 'react'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 import styled, { ThemeProvider } from 'styled-components'
 
 import { Header } from '@/components/templates/Header'
@@ -11,7 +13,9 @@ export const Layout: React.FC = ({ children }) => (
   <ThemeProvider theme={theme}>
     <GlobalStyle {...theme} />
     <Header />
-    <_Main>{children}</_Main>
+    <DndProvider backend={HTML5Backend}>
+      <_Main>{children}</_Main>
+    </DndProvider>
   </ThemeProvider>
 )
 
