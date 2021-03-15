@@ -11,6 +11,7 @@ export const theme = {
   gray3: '#454545',
   black: '#252525',
   red: '#ef0130',
+  green: '#01ef14',
   small: '700px',
 }
 
