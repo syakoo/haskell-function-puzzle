@@ -31,7 +31,7 @@ const MappingView: React.VFC<MappingViewProps> = ({ from, to }) => {
 // ___________
 //
 const _MappingView = styled.div`
-  font-size: 3rem;
+  font-size: 2.5rem;
 `
 
 const _FlexCenter = styled.div`
