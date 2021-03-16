@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { MappingView } from '@/components/molecules/MappingView'
+import { NextBtns } from '@/components/molecules/NextBtns'
 import { Choice } from '@/components/organisms/Choice'
 import { AnswerSheet } from '@/components/organisms/AnswerSheet'
 
@@ -20,7 +21,6 @@ const ProblemView: React.VFC<ProblemViewProps> = ({ problem }) => {
     <div>
       <_Head>
         <div>
-          <_Date>{problem.createdAt}</_Date>
           <div>
             Problem {problem.level}-{problem.id}
           </div>
@@ -41,6 +41,9 @@ const ProblemView: React.VFC<ProblemViewProps> = ({ problem }) => {
           </_Space>
         ))}
       </_Choices>
+      <_MarginTop>
+        <NextBtns level={problem.level} id={problem.id} />
+      </_MarginTop>
     </div>
   )
 }
@@ -65,9 +68,8 @@ const _Space = styled.div`
   margin: 0.5rem;
 `
 
-const _Date = styled.div`
-  font-size: small;
-  color: ${(p) => p.theme.gray2};
+const _MarginTop = styled.div`
+  margin-top: 5rem;
 `
 
 export default ProblemView

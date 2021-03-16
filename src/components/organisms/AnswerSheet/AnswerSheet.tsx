@@ -19,6 +19,10 @@ const AnswerSheet: React.VFC<AnswerSheetProps> = ({ collectAnswer, sheet }) => {
   const [isCollect, setIsCollect] = useState<boolean | null>(null)
 
   useEffect(() => {
+    setAnswer(Array.from({ length: collectAnswer.length }, () => ''))
+  }, [collectAnswer])
+
+  useEffect(() => {
     if (!ans.every((a) => !!a)) {
       setIsCollect(null)
       return
@@ -107,4 +111,4 @@ const _Wrong = styled.div`
   color: ${(p) => p.theme.red};
 `
 
-export default AnswerSheet
+export default React.memo(AnswerSheet)

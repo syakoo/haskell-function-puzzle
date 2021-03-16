@@ -2,7 +2,6 @@ import type { StoredProblem } from '@/types'
 
 export default [
   {
-    createdAt: '2021/03/15',
     env: 'GHC 8.6.5',
     map: { from: '[1, 2, 3]', to: '[2, 3, 4]' },
     sheet: ['f = ■ ■'],
@@ -10,7 +9,6 @@ export default [
     collectAnswer: ['map', '(+1)'],
   },
   {
-    createdAt: '2021/03/16',
     env: 'GHC 8.6.5',
     map: { from: '[1, 2, 3]', to: '2' },
     sheet: ['f = ■ . ■'],
@@ -18,7 +16,6 @@ export default [
     collectAnswer: ['head', 'tail'],
   },
   {
-    createdAt: '2021/03/16',
     env: 'GHC 8.6.5',
     map: { from: '[1, 2, 3]', to: '3' },
     sheet: ['f = ■ . ■'],
@@ -26,15 +23,13 @@ export default [
     collectAnswer: ['head', 'reverse'],
   },
   {
-    createdAt: '2021/03/16',
     env: 'GHC 8.6.5',
     map: { from: '3', to: '[1, 2, 3]' },
-    sheet: ['f = ■ 3 ■'],
-    choices: ['take', 'repeat', '[1..]', '[0..]'],
-    collectAnswer: ['take', '[1..]'],
+    sheet: ['f = ■ ■ [1..]'],
+    choices: ['take', 'repeat', 'flip'],
+    collectAnswer: ['flip', 'take'],
   },
   {
-    createdAt: '2021/03/16',
     env: 'GHC 8.6.5',
     map: { from: '["abc", "def"]', to: '["cba", "fed"]' },
     sheet: ['f = ■ ■'],
