@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { MappingView } from '@/components/molecules/MappingView'
+import { NextBtns } from '@/components/molecules/NextBtns'
 import { Choice } from '@/components/organisms/Choice'
 import { AnswerSheet } from '@/components/organisms/AnswerSheet'
 
@@ -41,6 +42,9 @@ const ProblemView: React.VFC<ProblemViewProps> = ({ problem }) => {
           </_Space>
         ))}
       </_Choices>
+      <_MarginTop>
+        <NextBtns level={problem.level} id={problem.id} />
+      </_MarginTop>
     </div>
   )
 }
@@ -63,6 +67,10 @@ const _Choices = styled.div`
 
 const _Space = styled.div`
   margin: 0.5rem;
+`
+
+const _MarginTop = styled.div`
+  margin-top: 5rem;
 `
 
 const _Date = styled.div`

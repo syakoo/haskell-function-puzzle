@@ -18,7 +18,7 @@ const Footer: React.VFC = () => {
 //
 const _Footer = styled.footer`
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
   padding: 1rem;
   color: ${(p) => p.theme.gray2};
 
