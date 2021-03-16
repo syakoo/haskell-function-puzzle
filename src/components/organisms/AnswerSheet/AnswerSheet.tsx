@@ -93,6 +93,7 @@ const _SheetRow = styled.div`
 `
 
 const _ResultBox = styled.div`
+  margin-top: 5px;
   height: 3rem;
   text-align: center;
 `
