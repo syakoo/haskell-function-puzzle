@@ -35,7 +35,7 @@ const _DropBox = styled.div<{ isDropped: boolean; isOver: boolean }>`
   display: inline-block;
   text-align: center;
   font-size: 1.5rem;
-  padding: 6px;
+  padding: 3px;
   min-width: 3rem;
   min-height: 2rem;
   border: 1px solid ${(p) => (p.isOver ? p.theme.secondary : p.theme.gray2)};

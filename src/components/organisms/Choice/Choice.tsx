@@ -25,7 +25,7 @@ const Choice: React.VFC<ChoiceProps> = ({ txt }) => {
 const _Block = styled.div`
   display: inline-block;
   font-size: 1.5rem;
-  padding: 0.5rem 1rem;
+  padding: 3px;
   border: 1px solid ${(p) => p.theme.gray2};
   border-radius: 5px;
   background-color: ${(p) => p.theme.gray3};
