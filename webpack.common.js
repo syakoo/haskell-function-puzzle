@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const path = require('path')
 
 module.exports = {
@@ -30,6 +31,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: `${__dirname}/src/index.html`,
       filename: 'index.html',
+      favicon: `${__dirname}/public/logo.ico`,
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: `${__dirname}/public`, to: 'public' }],
     }),
   ],
 }
