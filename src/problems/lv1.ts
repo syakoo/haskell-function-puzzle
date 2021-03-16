@@ -33,4 +33,12 @@ export default [
     choices: ['take', 'repeat', '[1..]', '[0..]'],
     collectAnswer: ['take', '[1..]'],
   },
+  {
+    createdAt: '2021/03/16',
+    env: 'GHC 8.6.5',
+    map: { from: '["abc", "def"]', to: '["cba", "fed"]' },
+    sheet: ['f = ■ ■'],
+    choices: ['foldr', 'map', 'reverse'],
+    collectAnswer: ['map', 'reverse'],
+  },
 ] as StoredProblem[]
