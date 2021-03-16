@@ -14,10 +14,14 @@ module.exports = {
         exclude: ['/node_modules/'],
         use: 'ts-loader',
       },
+      {
+        test: /\.(ico|svg|jpe?g|png|webp)$/,
+        type: 'asset/inline',
+      },
     ],
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json'],
+    extensions: ['.ts', '.tsx', '.js', '.json', '.png'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
