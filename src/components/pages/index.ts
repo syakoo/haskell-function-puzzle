@@ -3,6 +3,7 @@ import { RouteComponentProps } from 'react-router-dom'
 
 import { HomePage } from './Home'
 import { ProblemPage } from './Problem'
+import { NotFound } from '@/components/templates/NotFound'
 
 // ___________
 //
@@ -28,5 +29,11 @@ export const pages: Page[] = [
     path: '/problem/:lv/:id',
     exact: true,
     component: ProblemPage,
+  },
+  {
+    title: 'NOTFOUND',
+    path: '/',
+    exact: false,
+    component: NotFound,
   },
 ]

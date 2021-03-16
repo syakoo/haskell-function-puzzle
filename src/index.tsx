@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { HashRouter, Route } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 
 import { pages } from './components/pages'
 import { Layout } from './components/layouts'
@@ -10,14 +10,16 @@ import { Layout } from './components/layouts'
 const App: React.FC = () => (
   <HashRouter>
     <Layout>
-      {pages.map((page) => (
-        <Route
-          key={page.title}
-          path={page.path}
-          component={page.component}
-          exact={page.exact}
-        />
-      ))}
+      <Switch>
+        {pages.map((page) => (
+          <Route
+            key={page.title}
+            path={page.path}
+            component={page.component}
+            exact={page.exact}
+          />
+        ))}
+      </Switch>
     </Layout>
   </HashRouter>
 )
