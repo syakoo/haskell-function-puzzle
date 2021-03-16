@@ -12,28 +12,35 @@ type DropBoxProps = {
 // ___________
 //
 const DropBox: React.VFC<DropBoxProps> = ({ ans, setAns }) => {
-  const [, dropRef] = useDrop(() => ({
+  const [{ isOver }, dropRef] = useDrop(() => ({
     accept: 'CHOICE',
     drop: (item: { txt: string }) => {
       setAns(item.txt)
     },
+    collect: (monitor) => ({
+      isOver: !!monitor.isOver(),
+    }),
   }))
 
-  return <_DropBox ref={dropRef}>{ans}</_DropBox>
+  return (
+    <_DropBox ref={dropRef} isDropped={!!ans} isOver={isOver}>
+      {ans}
+    </_DropBox>
+  )
 }
 
 // ___________
 //
-const _DropBox = styled.div`
+const _DropBox = styled.div<{ isDropped: boolean; isOver: boolean }>`
   display: inline-block;
   text-align: center;
   font-size: 1.5rem;
   padding: 6px;
   min-width: 3rem;
   min-height: 2rem;
-  border: 1px solid ${(p) => p.theme.gray2};
+  border: 1px solid ${(p) => (p.isOver ? p.theme.secondary : p.theme.gray2)};
   border-radius: 5px;
-  background-color: ${(p) => p.theme.gray3};
+  background-color: ${(p) => (p.isDropped ? p.theme.gray : p.theme.gray3)};
 `
 
 export default DropBox

@@ -7,12 +7,12 @@ import { DropBox } from '@/components/organisms/DropBox'
 //
 type AnswerSheetProps = {
   collectAnswer: string[]
-  f: string
+  sheet: string[]
 }
 
 // ___________
 //
-const AnswerSheet: React.VFC<AnswerSheetProps> = ({ collectAnswer, f }) => {
+const AnswerSheet: React.VFC<AnswerSheetProps> = ({ collectAnswer, sheet }) => {
   const [ans, setAnswer] = useState<string[]>(
     Array.from({ length: collectAnswer.length }, () => '')
   )
@@ -34,25 +34,29 @@ const AnswerSheet: React.VFC<AnswerSheetProps> = ({ collectAnswer, f }) => {
   return (
     <_AnswerSheet>
       <_AnswerSheetInner>
-        {f
-          .replaceAll(' ', '\u00A0')
-          .split('■')
-          .map((s, i) => (
-            <Fragment key={`${i}${s}`}>
-              <div>{s}</div>
-              {i < collectAnswer.length && (
-                <DropBox
-                  ans={ans[i]}
-                  setAns={(a) =>
-                    setAnswer((pre) => {
-                      pre[i] = a
-                      return [...pre]
-                    })
-                  }
-                />
-              )}
-            </Fragment>
-          ))}
+        {sheet.map((r, j) => (
+          <_SheetRow key={j}>
+            {r
+              .replaceAll(' ', '\u00A0')
+              .split('■')
+              .map((s, i) => (
+                <Fragment key={`${i}${s}`}>
+                  <div>{s}</div>
+                  {i < r.split('■').length - 1 && (
+                    <DropBox
+                      ans={ans[i]}
+                      setAns={(a) =>
+                        setAnswer((pre) => {
+                          pre[i] = a
+                          return [...pre]
+                        })
+                      }
+                    />
+                  )}
+                </Fragment>
+              ))}
+          </_SheetRow>
+        ))}
       </_AnswerSheetInner>
       <_ResultBox>
         {isCollect ? (
@@ -74,10 +78,18 @@ const _AnswerSheet = styled.div`
 `
 
 const _AnswerSheetInner = styled.div`
-  padding-bottom: 1rem;
-  display: flex;
-  justify-content: center;
+  margin: auto;
+  max-width: 600px;
+  padding: 1rem;
   font-size: 2rem;
+  background-color: ${(p) => p.theme.gray};
+  border-radius: 5px;
+  color: ${(p) => p.theme.black};
+`
+
+const _SheetRow = styled.div`
+  display: flex;
+  width: 400px;
 `
 
 const _ResultBox = styled.div`
