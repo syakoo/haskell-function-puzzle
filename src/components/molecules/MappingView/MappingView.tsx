@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import { Arrow } from '@/components/atoms/Icons'
 
@@ -18,7 +18,9 @@ const MappingView: React.VFC<MappingViewProps> = ({ from, to }) => {
       <_FlexCenter>
         <div>{from}</div>
         <_ArrowDiv>
-          <Arrow />
+          <div>
+            <Arrow />
+          </div>
         </_ArrowDiv>
         <div>{to}</div>
       </_FlexCenter>
@@ -38,14 +40,41 @@ const _FlexCenter = styled.div`
   align-items: center;
 `
 
+const arrowAnimation = keyframes`
+  from {
+    transform: translateX(-100%); 
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%); 
+    opacity: 1;
+  }
+`
+
+const textFadeIn = keyframes`
+  from {
+    transform: translate(-50%, 10px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0px);
+    opacity: 1;
+  }
+`
+
 const _ArrowDiv = styled.div`
   display: flex;
   position: relative;
   margin: 0px 1rem;
   align-items: center;
   color: ${(p) => p.theme.secondary};
-  svg {
-    width: 5rem;
+  div {
+    display: inline-flex;
+    overflow-x: hidden;
+    svg {
+      width: 5rem;
+      animation: ${arrowAnimation} 0.5s ease-in-out forwards;
+    }
   }
   &:before {
     content: 'f';
@@ -53,7 +82,9 @@ const _ArrowDiv = styled.div`
     top: -50%;
     left: 50%;
     transform: translate(-50%, 0px);
+    opacity: 0;
     font-weight: bold;
+    animation: ${textFadeIn} 0.3s linear 0.3s forwards;
   }
 `
 
