@@ -1,4 +1,6 @@
 import lv1 from './lv1'
+import lv2 from './lv2'
+import lv3 from './lv3'
 
 import type { StoredProblem, Problem } from '@/types'
 
@@ -11,6 +13,10 @@ export function fetchProblemsByLv(lv: number): StoredProblem[] {
   switch (lv) {
     case 1:
       return lv1
+    case 2:
+      return lv2
+    case 3:
+      return lv3
   }
   return []
 }
