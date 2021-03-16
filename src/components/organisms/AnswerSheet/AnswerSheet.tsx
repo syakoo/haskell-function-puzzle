@@ -94,7 +94,6 @@ const _AnswerSheetInner = styled.div`
 const _SheetRow = styled.div`
   display: flex;
   height: 3rem;
-  width: 400px;
 `
 
 const _ResultBox = styled.div`
