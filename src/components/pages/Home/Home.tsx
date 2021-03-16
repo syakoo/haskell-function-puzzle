@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { RouteComponentProps } from 'react-router-dom'
 
+import { ProblemList } from '@/components/molecules/ProblemList'
+
 // ___________
 //
 const HomePage: React.VFC<RouteComponentProps> = () => {
@@ -10,14 +12,27 @@ const HomePage: React.VFC<RouteComponentProps> = () => {
       <_Section>
         <h2>問題一覧</h2>
         <div>
-          <h3>
+          <_H3>
             Lv. <_Star />
-          </h3>
-          <div></div>
-          <h3>Lv. <_Star /><_Star /></h3>
-          <div></div>
-          <h3>Lv. <_Star /><_Star /><_Star /></h3>
-          <div></div>
+          </_H3>
+          <div>
+            <ProblemList level={1} />
+          </div>
+          <_H3>
+            Lv. <_Star />
+            <_Star />
+          </_H3>
+          <div>
+            <ProblemList level={2} />
+          </div>
+          <_H3>
+            Lv. <_Star />
+            <_Star />
+            <_Star />
+          </_H3>
+          <div>
+            <ProblemList level={3} />
+          </div>
         </div>
       </_Section>
       <_Section>
@@ -49,6 +64,10 @@ const _Section = styled.section`
     margin: 6px 0px;
     color: ${(p) => p.theme.gray2};
   }
+`
+
+const _H3 = styled.h3`
+  margin-bottom: 0.5rem;
 `
 
 // ___________
