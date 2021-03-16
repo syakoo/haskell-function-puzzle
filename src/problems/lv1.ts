@@ -60,7 +60,7 @@ export default [
   {
     env: 'GHC 8.6.5',
     map: { from: '1', to: '[1, 11, 111, 1111, 11111]' },
-    sheet: ['f = (take 5) . ■ (\\x -> x*■ + 1)'],
+    sheet: ['f = take 5 . ■ (\\x -> x*■ + 1)'],
     choices: ['iterate', 'repeat', '10', '11'],
     collectAnswer: ['iterate', '10'],
   },

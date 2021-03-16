@@ -11,4 +11,14 @@ export default [
     choices: ['filter', 'filterM', 'x <= 3', '[True, False]'],
     collectAnswer: ['filterM', '[True, False]'],
   },
+  {
+    env: 'GHC 8.6.5',
+    map: {
+      from: '[1, 0, 1, 1]',
+      to: '11',
+    },
+    sheet: ['f = ■ . ■ (*) (iterate (*2) 1) . reverse'],
+    choices: ['zip', 'zipWith', 'product', 'sum'],
+    collectAnswer: ['sum', 'zipWith'],
+  },
 ] as StoredProblem[]

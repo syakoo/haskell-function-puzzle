@@ -85,7 +85,7 @@ const _AnswerSheetInner = styled.div`
   margin: auto;
   max-width: 600px;
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background-color: ${(p) => p.theme.gray};
   border-radius: 5px;
   color: ${(p) => p.theme.black};
@@ -93,7 +93,8 @@ const _AnswerSheetInner = styled.div`
 
 const _SheetRow = styled.div`
   display: flex;
-  height: 3rem;
+  align-items: center;
+  height: 2rem;
 `
 
 const _ResultBox = styled.div`
