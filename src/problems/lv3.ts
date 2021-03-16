@@ -9,7 +9,7 @@ export default [
       to: '[[1,2,3],[1,2],[1,3],[1],[2,3],[2],[3],[]]',
     },
     sheet: ['import Control.Monad', '', 'f = ■ (\\x -> ■)'],
-    choices: ['filter', 'filterM', '(<= 3)', '[True, False]'],
+    choices: ['filter', 'filterM', 'x <= 3', '[True, False]'],
     collectAnswer: ['filterM', '[True, False]'],
   },
 ] as StoredProblem[]
