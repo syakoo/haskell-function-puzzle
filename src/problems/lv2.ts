@@ -2,7 +2,6 @@ import type { StoredProblem } from '@/types'
 
 export default [
   {
-    createdAt: '2021/03/16',
     env: 'GHC 8.6.5',
     map: { from: '["odd", "even"]', to: '[False, True]' },
     sheet: ['f = ■ $ ■ . ■'],
@@ -10,7 +9,6 @@ export default [
     collectAnswer: ['map', 'even', 'length'],
   },
   {
-    createdAt: '2021/03/16',
     env: 'GHC 8.6.5',
     map: {
       from: '[1,2,3]',
@@ -21,7 +19,6 @@ export default [
     collectAnswer: ['(:)', '(*2)'],
   },
   {
-    createdAt: '2021/03/16',
     env: 'GHC 8.6.5',
     map: { from: '[True, False, True]', to: '2' },
     sheet: ['f = ■ . ■ ■'],
@@ -29,7 +26,6 @@ export default [
     collectAnswer: ['length', 'filter', 'id'],
   },
   {
-    createdAt: '2021/03/16',
     env: 'GHC 8.6.5',
     map: {
       from: '[1,2,3]',

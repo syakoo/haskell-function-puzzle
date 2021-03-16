@@ -23,7 +23,6 @@ const AnswerSheet: React.VFC<AnswerSheetProps> = ({ collectAnswer, sheet }) => {
   }, [collectAnswer])
 
   useEffect(() => {
-    console.log({ ans, collectAnswer })
     if (!ans.every((a) => !!a)) {
       setIsCollect(null)
       return

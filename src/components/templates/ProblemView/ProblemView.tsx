@@ -21,7 +21,6 @@ const ProblemView: React.VFC<ProblemViewProps> = ({ problem }) => {
     <div>
       <_Head>
         <div>
-          <_Date>{problem.createdAt}</_Date>
           <div>
             Problem {problem.level}-{problem.id}
           </div>
@@ -71,11 +70,6 @@ const _Space = styled.div`
 
 const _MarginTop = styled.div`
   margin-top: 5rem;
-`
-
-const _Date = styled.div`
-  font-size: small;
-  color: ${(p) => p.theme.gray2};
 `
 
 export default ProblemView
