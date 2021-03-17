@@ -2,6 +2,7 @@ import type { StoredProblem } from '@/types'
 
 export default [
   {
+    title: '',
     env: 'GHC 8.6.5',
     map: {
       from: '[1, 2, 3]',
@@ -12,6 +13,7 @@ export default [
     collectAnswer: ['filterM', '[True, False]'],
   },
   {
+    title: '2進数？',
     env: 'GHC 8.6.5',
     map: {
       from: '[1, 0, 1, 1]',

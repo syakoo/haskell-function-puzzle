@@ -2,6 +2,7 @@ import type { StoredProblem } from '@/types'
 
 export default [
   {
+    title: 'even は偶数字数',
     env: 'GHC 8.6.5',
     map: { from: '["odd", "even"]', to: '[False, True]' },
     sheet: ['f = ■ $ ■ . ■'],
@@ -9,6 +10,7 @@ export default [
     collectAnswer: ['map', 'even', 'length'],
   },
   {
+    title: '',
     env: 'GHC 8.6.5',
     map: {
       from: '[1,2,3]',
@@ -19,6 +21,7 @@ export default [
     collectAnswer: ['(:)', '(*2)'],
   },
   {
+    title: 'True カウンター',
     env: 'GHC 8.6.5',
     map: { from: '[True, False, True]', to: '2' },
     sheet: ['f = ■ . ■ ■'],
@@ -26,6 +29,7 @@ export default [
     collectAnswer: ['length', 'filter', 'id'],
   },
   {
+    title: '',
     env: 'GHC 8.6.5',
     map: {
       from: '[1,2,3]',
