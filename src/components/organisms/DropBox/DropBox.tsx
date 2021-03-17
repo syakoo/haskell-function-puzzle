@@ -41,6 +41,8 @@ const _DropBox = styled.div<{ isDropped: boolean; isOver: boolean }>`
   border: 1px solid ${(p) => (p.isOver ? p.theme.secondary : p.theme.gray2)};
   border-radius: 5px;
   background-color: ${(p) => (p.isDropped ? p.theme.gray : p.theme.gray3)};
+  box-shadow: 0px 0px 4px 1px
+    ${(p) => (p.isOver ? p.theme.secondary : 'transparent')};
 `
 
 export default DropBox

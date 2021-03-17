@@ -2,6 +2,7 @@ import type { StoredProblem } from '@/types'
 
 export default [
   {
+    title: 'インクリメント',
     env: 'GHC 8.6.5',
     map: { from: '[1, 2, 3]', to: '[2, 3, 4]' },
     sheet: ['f = ■ ■'],
@@ -9,6 +10,7 @@ export default [
     collectAnswer: ['map', '(+1)'],
   },
   {
+    title: '二つ目を取り出す',
     env: 'GHC 8.6.5',
     map: { from: '[1, 2, 3]', to: '2' },
     sheet: ['f = ■ . ■'],
@@ -16,6 +18,7 @@ export default [
     collectAnswer: ['head', 'tail'],
   },
   {
+    title: '最後を取り出す',
     env: 'GHC 8.6.5',
     map: { from: '[1, 2, 3]', to: '3' },
     sheet: ['f = ■ . ■'],
@@ -23,6 +26,7 @@ export default [
     collectAnswer: ['head', 'reverse'],
   },
   {
+    title: '長さを指定',
     env: 'GHC 8.6.5',
     map: { from: '3', to: '[1, 2, 3]' },
     sheet: ['f = ■ ■ [1..]'],
@@ -30,6 +34,7 @@ export default [
     collectAnswer: ['flip', 'take'],
   },
   {
+    title: '全部反転',
     env: 'GHC 8.6.5',
     map: { from: '["abc", "def"]', to: '["cba", "fed"]' },
     sheet: ['f = ■ ■'],
@@ -37,6 +42,7 @@ export default [
     collectAnswer: ['map', 'reverse'],
   },
   {
+    title: '取って付けて',
     env: 'GHC 8.6.5',
     map: { from: '[1, 2, 3]', to: '[1, 2, 4]' },
     sheet: ['f = ■ . ■'],
@@ -44,6 +50,7 @@ export default [
     collectAnswer: ['(++[4])', 'init'],
   },
   {
+    title: '後ろを持ってくる',
     env: 'GHC 8.6.5',
     map: { from: '[1, 2, 3, 4, 5]', to: '[4, 5]' },
     sheet: ['f = ■ ■'],
@@ -51,6 +58,7 @@ export default [
     collectAnswer: ['drop', '3'],
   },
   {
+    title: '後ろを持ってくる２',
     env: 'GHC 8.6.5',
     map: { from: '[1, 2, 3, 4, 5]', to: '[4, 5]' },
     sheet: ['f = ■ ■'],
@@ -58,6 +66,7 @@ export default [
     collectAnswer: ['dropWhile', '(<4)'],
   },
   {
+    title: '増殖',
     env: 'GHC 8.6.5',
     map: { from: '1', to: '[1, 11, 111, 1111, 11111]' },
     sheet: ['f = take 5 . ■ (\\x -> x*■ + 1)'],
@@ -65,6 +74,7 @@ export default [
     collectAnswer: ['iterate', '10'],
   },
   {
+    title: '桁は三つまで',
     env: 'GHC 8.6.5',
     map: { from: '[3, 1, 4, 1, 5]', to: '[(0, 3), (1, 1), (2, 4)]' },
     sheet: ['f = ■ ■'],

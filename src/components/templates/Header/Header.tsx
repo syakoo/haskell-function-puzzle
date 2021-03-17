@@ -7,7 +7,9 @@ import styled from 'styled-components'
 const Header: React.VFC = () => {
   return (
     <_Header>
-      <_Title to="/">Haskell Function Puzzle</_Title>
+      <_Title to="/">
+        Haskell Function <_Secondary>Puzzle</_Secondary>
+      </_Title>
     </_Header>
   )
 }
@@ -15,14 +17,15 @@ const Header: React.VFC = () => {
 // ___________
 //
 const _Header = styled.header`
-  text-align: center;
   padding: 1rem;
+  max-width: 1000px;
+  margin: auto;
 `
 
 const _Title = styled(Link)`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: ${(p) => p.theme.white};
+  color: ${(p) => p.theme.gray};
   text-decoration: none;
   &:hover {
     filter: brightness(0.8);
@@ -30,6 +33,10 @@ const _Title = styled(Link)`
   &:active {
     filter: brightness(0.6);
   }
+`
+
+const _Secondary = styled.span`
+  color: ${(p) => p.theme.secondary};
 `
 
 export default Header
