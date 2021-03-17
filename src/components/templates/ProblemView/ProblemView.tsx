@@ -21,11 +21,10 @@ const ProblemView: React.VFC<ProblemViewProps> = ({ problem }) => {
     <div>
       <_Head>
         <div>
-          <div>
-            Problem {problem.level}-{problem.id}
-          </div>
+          {problem.level}-{problem.id}
+          <_Title>{problem.title}</_Title>
         </div>
-        <div>version: {problem.env}</div>
+        <_Version>version: {problem.env}</_Version>
       </_Head>
       <_Body>
         <MappingView from={problem.map.from} to={problem.map.to} />
@@ -53,6 +52,16 @@ const ProblemView: React.VFC<ProblemViewProps> = ({ problem }) => {
 const _Head = styled.div`
   display: flex;
   justify-content: space-between;
+`
+
+const _Title = styled.span`
+  font-weight: bold;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+`
+
+const _Version = styled.div`
+  color: ${(p) => p.theme.gray2};
 `
 
 const _Body = styled.div`
