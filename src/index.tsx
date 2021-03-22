@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { HashRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import { pages } from './components/pages'
 import { Layout } from './components/layouts'
@@ -8,7 +8,7 @@ import { Layout } from './components/layouts'
 // __________
 //
 const App: React.FC = () => (
-  <HashRouter>
+  <BrowserRouter>
     <Layout>
       <Switch>
         {pages.map((page) => (
@@ -21,7 +21,7 @@ const App: React.FC = () => (
         ))}
       </Switch>
     </Layout>
-  </HashRouter>
+  </BrowserRouter>
 )
 
 const Container: React.FC = () => <App />
