@@ -1,0 +1,28 @@
+.errorBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 2rem 0px;
+}
+
+.errorCode {
+  margin-right: 2rem;
+  font-size: 8rem;
+  color: var(--secondary);
+}
+
+.errorMsg {
+  font-size: 3rem;
+  color: var(--gray2);
+}
+
+.link {
+  display: inline-block;
+  margin: auto;
+  color: var(--secondary);
+}
+
+.center {
+  text-align: center;
+}
