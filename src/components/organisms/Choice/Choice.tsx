@@ -25,4 +25,4 @@ const Choice: React.VFC<ChoiceProps> = ({ txt }) => {
   )
 }
 
-export default Choice
+export default React.memo(Choice)

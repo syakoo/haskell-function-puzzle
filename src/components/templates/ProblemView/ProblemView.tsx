@@ -48,4 +48,4 @@ const ProblemView: React.VFC<ProblemViewProps> = ({ problem }) => {
   )
 }
 
-export default ProblemView
+export default React.memo(ProblemView)

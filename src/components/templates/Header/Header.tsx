@@ -19,4 +19,4 @@ const Header: React.VFC = () => {
 
 // ___________
 //
-export default Header
+export default React.memo(Header)

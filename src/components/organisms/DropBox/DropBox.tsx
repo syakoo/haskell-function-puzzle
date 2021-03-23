@@ -35,4 +35,4 @@ const DropBox: React.VFC<DropBoxProps> = ({ ans, setAns }) => {
   )
 }
 
-export default DropBox
+export default React.memo(DropBox)
