@@ -21,7 +21,7 @@ const ProblemList: React.VFC<ProblemListProps> = ({ level }) => {
   return (
     <div>
       {problems.map((p, i) => (
-        <Link key={i} href={`problem/${level}/${i}`}>
+        <Link key={i} href={`/problem/${level}/${i}`}>
           <a className={styles.link}>[{i}]</a>
         </Link>
       ))}
