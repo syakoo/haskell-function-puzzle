@@ -2,3 +2,4 @@ node_modules
 dist
 my-repo*
 .next
+.env
