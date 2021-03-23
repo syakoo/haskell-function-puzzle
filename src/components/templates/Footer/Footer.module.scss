@@ -1,0 +1,16 @@
+.footer {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  color: var(--gray2);
+
+  &::before {
+    content: '';
+    display: block;
+    max-width: 300px;
+    margin: 1rem auto;
+    height: 1px;
+    background-color: var(--gray);
+    opacity: 0.2;
+  }
+}

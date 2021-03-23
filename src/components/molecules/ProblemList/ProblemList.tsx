@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import Link from 'next/link'
 
 import { fetchProblemsByLv } from '@/problems'
+
+import styles from './ProblemList.module.scss'
 
 // ___________
 //
@@ -20,29 +21,12 @@ const ProblemList: React.VFC<ProblemListProps> = ({ level }) => {
   return (
     <div>
       {problems.map((p, i) => (
-        <_Link key={i} to={`problem/${level}/${i}`}>
-          [{i}]
-        </_Link>
+        <Link key={i} href={`problem/${level}/${i}`}>
+          <a className={styles.link}>[{i}]</a>
+        </Link>
       ))}
     </div>
   )
 }
-
-// ___________
-//
-const _Link = styled(Link)`
-  margin: 3px 6px;
-  color: ${(p) => p.theme.gray};
-  text-decoration: none;
-  &:hover {
-    opacity: 0.5;
-  }
-  &:active {
-    opacity: 0.3;
-  }
-  &:visited {
-    color: ${(p) => p.theme.gray2};
-  }
-`
 
 export default ProblemList
