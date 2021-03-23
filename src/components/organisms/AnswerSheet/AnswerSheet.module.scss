@@ -1,0 +1,33 @@
+.answerSheet {
+  padding: 1rem 0px;
+}
+
+.answerSheetInner {
+  margin: auto;
+  max-width: 600px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: var(--gray);
+  border-radius: 5px;
+  color: var(--black);
+}
+
+.sheetRow {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+
+.resultBox {
+  margin-top: 5px;
+  height: 3rem;
+  text-align: center;
+}
+
+.collect {
+  color: var(--green);
+}
+
+.wrong {
+  color: var(--red);
+}

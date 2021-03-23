@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import { MappingView } from '@/components/molecules/MappingView'
 import { NextBtns } from '@/components/molecules/NextBtns'
@@ -7,6 +6,8 @@ import { Choice } from '@/components/organisms/Choice'
 import { AnswerSheet } from '@/components/organisms/AnswerSheet'
 
 import type { Problem } from '@/types'
+
+import styles from './ProblemView.module.scss'
 
 // __________
 //
@@ -19,66 +20,32 @@ type ProblemViewProps = {
 const ProblemView: React.VFC<ProblemViewProps> = ({ problem }) => {
   return (
     <div>
-      <_Head>
+      <div className={styles.head}>
         <div>
           {problem.level}-{problem.id}
-          <_Title>{problem.title}</_Title>
+          <span className={styles.title}>{problem.title}</span>
         </div>
-        <_Version>version: {problem.env}</_Version>
-      </_Head>
-      <_Body>
+        <div className={styles.version}>version: {problem.env}</div>
+      </div>
+      <div className={styles.body}>
         <MappingView from={problem.map.from} to={problem.map.to} />
-      </_Body>
+      </div>
       <AnswerSheet
         collectAnswer={problem.collectAnswer}
         sheet={problem.sheet}
       />
-      <_Choices>
+      <div className={styles.choices}>
         {problem.choices.map((txt) => (
-          <_Space key={txt}>
+          <div className={styles.space} key={txt}>
             <Choice txt={txt} />
-          </_Space>
+          </div>
         ))}
-      </_Choices>
-      <_MarginTop>
+      </div>
+      <div className={styles.marginTop}>
         <NextBtns level={problem.level} id={problem.id} />
-      </_MarginTop>
+      </div>
     </div>
   )
 }
-
-// __________
-//
-const _Head = styled.div`
-  display: flex;
-  justify-content: space-between;
-`
-
-const _Title = styled.span`
-  font-weight: bold;
-  margin-left: 1rem;
-  font-size: 1.5rem;
-`
-
-const _Version = styled.div`
-  color: ${(p) => p.theme.gray2};
-`
-
-const _Body = styled.div`
-  padding: 4rem 0px;
-`
-
-const _Choices = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
-const _Space = styled.div`
-  margin: 0.5rem;
-`
-
-const _MarginTop = styled.div`
-  margin-top: 5rem;
-`
 
 export default ProblemView

@@ -7,6 +7,27 @@ import type { StoredProblem, Problem } from '@/types'
 // ___________
 //
 /**
+ * 全問題を取得
+ */
+export function fetchProblemsAll(): Problem[] {
+  const levels = [1, 2, 3]
+  const problems = levels
+    .map((lv) => {
+      const ps = fetchProblemsByLv(lv)
+      return ps.map(
+        (p, i): Problem => ({
+          ...p,
+          level: lv,
+          id: i,
+        })
+      )
+    })
+    .reduce((prev, lv) => prev.concat(lv), [])
+
+  return problems
+}
+
+/**
  * 問題一覧の取得
  */
 export function fetchProblemsByLv(lv: number): StoredProblem[] {
