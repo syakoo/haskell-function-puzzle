@@ -19,7 +19,7 @@ type ProblemViewProps = {
 //
 const ProblemView: React.VFC<ProblemViewProps> = ({ problem }) => {
   return (
-    <div>
+    <section key={`${problem.level}${problem.id}`}>
       <div className={styles.head}>
         <div>
           {problem.level}-{problem.id}
@@ -44,7 +44,7 @@ const ProblemView: React.VFC<ProblemViewProps> = ({ problem }) => {
       <div className={styles.marginTop}>
         <NextBtns level={problem.level} id={problem.id} />
       </div>
-    </div>
+    </section>
   )
 }
 

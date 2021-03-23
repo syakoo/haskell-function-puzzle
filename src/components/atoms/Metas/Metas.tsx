@@ -16,17 +16,17 @@ const Metas: React.VFC = () => {
       <meta property="og:title" content="Haskell Function Puzzle" />
       <meta
         property="og:image"
-        content="https://syakoo.github.io/haskell-function-puzzle/public/logo.png"
+        content="https://syakoo.github.io/haskell-function-puzzle/logo.png"
       />
       <meta property="twitter:card" content="summary" />
       <meta property="twitter:title" content="Haskell Function Puzzle" />
       <meta
         property="twitter:image"
-        content="https://syakoo.github.io/haskell-function-puzzle/public/logo.png"
+        content="https://syakoo.github.io/haskell-function-puzzle/logo.png"
       />
       <link
         rel="icon"
-        href="https://haskell-function-puzzle.vercel.app/public/logo.ico"
+        href="https://haskell-function-puzzle.vercel.app/logo.ico"
       />
     </Head>
   )
