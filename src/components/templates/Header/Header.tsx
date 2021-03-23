@@ -1,42 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import Link from 'next/link'
+
+import styles from './Header.module.scss'
 
 // ___________
 //
 const Header: React.VFC = () => {
   return (
-    <_Header>
-      <_Title to="/">
-        Haskell Function <_Secondary>Puzzle</_Secondary>
-      </_Title>
-    </_Header>
+    <header className={styles.header}>
+      <Link href="/">
+        <a className={styles.title}>
+          Haskell Function <span className={styles.secondary}>Puzzle</span>
+        </a>
+      </Link>
+    </header>
   )
 }
 
 // ___________
 //
-const _Header = styled.header`
-  padding: 1rem;
-  max-width: 1000px;
-  margin: auto;
-`
-
-const _Title = styled(Link)`
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: ${(p) => p.theme.gray};
-  text-decoration: none;
-  &:hover {
-    filter: brightness(0.8);
-  }
-  &:active {
-    filter: brightness(0.6);
-  }
-`
-
-const _Secondary = styled.span`
-  color: ${(p) => p.theme.secondary};
-`
-
-export default Header
+export default React.memo(Header)

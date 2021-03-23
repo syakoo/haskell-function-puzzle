@@ -1,22 +1,22 @@
 import React from 'react'
-import { RouteComponentProps } from 'react-router-dom'
 
 import { ProblemView } from '@/components/templates/ProblemView'
-import { NotFound } from '@/components/templates/NotFound'
-import { fetchProblem } from '@/problems'
+import { MyDndProvider } from '@/components/templates/MyDndProvider'
+import { Problem } from '@/types'
 
 // ___________
 //
-const ProblemPage: React.VFC<
-  RouteComponentProps<{ id: string; lv: string }>
-> = ({ match }) => {
-  const { id, lv } = match.params
-  const problem = fetchProblem(+lv, +id)
+type ProblemPageProps = {
+  problem: Problem
+}
+
+// ___________
+//
+const ProblemPage: React.VFC<ProblemPageProps> = ({ problem }) => {
   return (
-    <div>
-      {problem && <ProblemView problem={problem} />}
-      {!problem && <NotFound />}
-    </div>
+    <MyDndProvider>
+      <ProblemView problem={problem} />
+    </MyDndProvider>
   )
 }
 

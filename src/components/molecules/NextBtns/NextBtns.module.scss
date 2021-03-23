@@ -1,0 +1,14 @@
+.links {
+  display: flex;
+  justify-content: center;
+  a {
+    margin: 0px 5px;
+    color: var(--secondary);
+    &:hover {
+      opacity: 0.7;
+    }
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

@@ -1,25 +1,16 @@
 import React from 'react'
-import styled from 'styled-components'
 
-import Logo from './GitHub.png'
+import styles from './GitHubLink.module.scss'
 
 // ___________
 //
 const GitHubLink: React.VFC = () => (
-  <_Link href="https://github.com/syakoo/haskell-function-puzzle">
-    <img src={Logo} />
-  </_Link>
+  <a
+    className={styles.link}
+    href="https://github.com/syakoo/haskell-function-puzzle"
+  >
+    <img src="/img/GitHub.png" />
+  </a>
 )
-
-// ___________
-//
-const _Link = styled.a`
-  &:hover {
-    opacity: 0.7;
-  }
-  &:active {
-    opacity: 0.5;
-  }
-`
 
 export default GitHubLink

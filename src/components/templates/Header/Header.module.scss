@@ -1,0 +1,22 @@
+.header {
+  padding: 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--gray);
+  text-decoration: none;
+  &:hover {
+    filter: brightness(0.8);
+  }
+  &:active {
+    filter: brightness(0.6);
+  }
+}
+
+.secondary {
+  color: var(--secondary);
+}

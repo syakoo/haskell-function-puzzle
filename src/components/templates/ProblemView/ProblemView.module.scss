@@ -1,0 +1,31 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: bold;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.version {
+  color: var(--gray2);
+}
+
+.body {
+  padding: 4rem 0px;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+}
+
+.space {
+  margin: 0.5rem;
+}
+
+.marginTop {
+  margin-top: 5rem;
+}

@@ -1,0 +1,19 @@
+.star {
+  margin: 0px 2px;
+  color: var(--secondary);
+  &:before {
+    content: '★';
+  }
+}
+
+.section {
+  margin-bottom: 5rem;
+  p {
+    margin: 6px 0px;
+    color: var(--gray2);
+  }
+}
+
+.h3 {
+  margin-bottom: 0.5rem;
+}

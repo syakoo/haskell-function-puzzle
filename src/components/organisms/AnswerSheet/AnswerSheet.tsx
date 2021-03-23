@@ -1,13 +1,18 @@
 import React, { useState, Fragment, useEffect } from 'react'
-import styled from 'styled-components'
 
 import { DropBox } from '@/components/organisms/DropBox'
+
+import styles from './AnswerSheet.module.scss'
 
 // ___________
 //
 type AnswerSheetProps = {
   collectAnswer: string[]
   sheet: string[]
+}
+
+const replaceAll = (text: string, from: string, to: string) => {
+  return text.split(from).join(to)
 }
 
 // ___________
@@ -36,12 +41,11 @@ const AnswerSheet: React.VFC<AnswerSheetProps> = ({ collectAnswer, sheet }) => {
   }, [ans, collectAnswer])
 
   return (
-    <_AnswerSheet>
-      <_AnswerSheetInner>
+    <div className={styles.answerSheet}>
+      <div className={styles.answerSheetInner}>
         {sheet.map((r, j) => (
-          <_SheetRow key={j}>
-            {r
-              .replaceAll(' ', '\u00A0')
+          <div className={styles.sheetRow} key={j}>
+            {replaceAll(r, ' ', '\u00A0')
               .split('■')
               .map((s, i) => (
                 <Fragment key={`${i}${s}`}>
@@ -59,56 +63,20 @@ const AnswerSheet: React.VFC<AnswerSheetProps> = ({ collectAnswer, sheet }) => {
                   )}
                 </Fragment>
               ))}
-          </_SheetRow>
+          </div>
         ))}
-      </_AnswerSheetInner>
-      <_ResultBox>
+      </div>
+      <div className={styles.resultBox}>
         {isCollect ? (
-          <_Collect>Collect</_Collect>
+          <div className={styles.collect}>Collect</div>
         ) : isCollect === false ? (
-          <_Wrong>Wrong</_Wrong>
+          <div className={styles.wrong}>Wrong</div>
         ) : (
           <></>
         )}
-      </_ResultBox>
-    </_AnswerSheet>
+      </div>
+    </div>
   )
 }
-
-// ___________
-//
-const _AnswerSheet = styled.div`
-  padding: 1rem 0px;
-`
-
-const _AnswerSheetInner = styled.div`
-  margin: auto;
-  max-width: 600px;
-  padding: 1rem;
-  font-size: 1.5rem;
-  background-color: ${(p) => p.theme.gray};
-  border-radius: 5px;
-  color: ${(p) => p.theme.black};
-`
-
-const _SheetRow = styled.div`
-  display: flex;
-  align-items: center;
-  height: 2rem;
-`
-
-const _ResultBox = styled.div`
-  margin-top: 5px;
-  height: 3rem;
-  text-align: center;
-`
-
-const _Collect = styled.div`
-  color: ${(p) => p.theme.green};
-`
-
-const _Wrong = styled.div`
-  color: ${(p) => p.theme.red};
-`
 
 export default React.memo(AnswerSheet)

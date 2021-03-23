@@ -1,7 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import { useDrag } from 'react-dnd'
+
+import styles from './Choice.module.scss'
 
 // ___________
 //
@@ -17,21 +18,11 @@ const Choice: React.VFC<ChoiceProps> = ({ txt }) => {
     item: { txt },
   }))
 
-  return <_Block ref={dragRef}>{txt}</_Block>
+  return (
+    <div className={styles.block} ref={dragRef}>
+      {txt}
+    </div>
+  )
 }
 
-// ___________
-//
-const _Block = styled.div`
-  display: inline-block;
-  font-size: 1.5rem;
-  padding: 3px;
-  border: 1px solid ${(p) => p.theme.gray2};
-  border-radius: 5px;
-  background-color: ${(p) => p.theme.gray3};
-  &:hover {
-    cursor: grab;
-  }
-`
-
-export default Choice
+export default React.memo(Choice)

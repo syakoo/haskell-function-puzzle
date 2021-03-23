@@ -1,0 +1,14 @@
+.link {
+  margin: 3px 6px;
+  color: var(--gray);
+  text-decoration: none;
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+  &:visited {
+    color: var(--gray2);
+  }
+}

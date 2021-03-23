@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDrop } from 'react-dnd'
-import styled from 'styled-components'
+
+import styles from './DropBox.module.scss'
 
 // ___________
 //
@@ -23,26 +24,15 @@ const DropBox: React.VFC<DropBoxProps> = ({ ans, setAns }) => {
   }))
 
   return (
-    <_DropBox ref={dropRef} isDropped={!!ans} isOver={isOver}>
+    <div
+      ref={dropRef}
+      className={styles.dropBox}
+      data-isover={isOver}
+      data-isdropped={!!ans}
+    >
       {ans}
-    </_DropBox>
+    </div>
   )
 }
 
-// ___________
-//
-const _DropBox = styled.div<{ isDropped: boolean; isOver: boolean }>`
-  display: inline-block;
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 3px;
-  min-width: 3rem;
-  min-height: 2rem;
-  border: 1px solid ${(p) => (p.isOver ? p.theme.secondary : p.theme.gray2)};
-  border-radius: 5px;
-  background-color: ${(p) => (p.isDropped ? p.theme.gray : p.theme.gray3)};
-  box-shadow: 0px 0px 4px 1px
-    ${(p) => (p.isOver ? p.theme.secondary : 'transparent')};
-`
-
-export default DropBox
+export default React.memo(DropBox)

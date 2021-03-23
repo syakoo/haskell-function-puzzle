@@ -1,6 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
+
+import styles from './NextBtns.module.scss'
 
 // __________
 //
@@ -13,28 +14,17 @@ type NextBtnsProps = {
 //
 const NextBtns: React.VFC<NextBtnsProps> = ({ level, id }) => {
   return (
-    <_Links>
-      {id > 0 && <Link to={`/problem/${level}/${id - 1}`}>PREV</Link>}
-      <Link to={`/problem/${level}/${id + 1}`}>NEXT</Link>
-    </_Links>
+    <div className={styles.links}>
+      {id > 0 && (
+        <Link href={`/problem/${level}/${id - 1}`}>
+          <a>PREV</a>
+        </Link>
+      )}
+      <Link href={`/problem/${level}/${id + 1}`}>
+        <a>NEXT</a>
+      </Link>
+    </div>
   )
 }
-
-// __________
-//
-const _Links = styled.div`
-  display: flex;
-  justify-content: center;
-  a {
-    margin: 0px 5px;
-    color: ${(p) => p.theme.secondary};
-    &:hover {
-      opacity: 0.7;
-    }
-    &:active {
-      opacity: 0.3;
-    }
-  }
-`
 
 export default NextBtns
