@@ -8,6 +8,7 @@ export default [
     sheet: ['f = ■ ■'],
     choices: ['map', '(+1)', '(-1)'],
     collectAnswer: ['map', '(+1)'],
+    comment: 'map で全ての要素をインクリメントします',
   },
   {
     title: '二つ目を取り出す',
@@ -16,6 +17,7 @@ export default [
     sheet: ['f = ■ . ■'],
     choices: ['tail', 'head', 'reverse'],
     collectAnswer: ['head', 'tail'],
+    comment: '',
   },
   {
     title: '最後を取り出す',
@@ -24,6 +26,7 @@ export default [
     sheet: ['f = ■ . ■'],
     choices: ['tail', 'head', 'reverse'],
     collectAnswer: ['head', 'reverse'],
+    comment: '',
   },
   {
     title: '長さを指定',
@@ -32,6 +35,7 @@ export default [
     sheet: ['f = ■ ■ [1..]'],
     choices: ['take', 'repeat', 'flip'],
     collectAnswer: ['flip', 'take'],
+    comment: '',
   },
   {
     title: '全部反転',
@@ -40,6 +44,7 @@ export default [
     sheet: ['f = ■ ■'],
     choices: ['foldr', 'map', 'reverse'],
     collectAnswer: ['map', 'reverse'],
+    comment: '',
   },
   {
     title: '取って付けて',
@@ -48,6 +53,7 @@ export default [
     sheet: ['f = ■ . ■'],
     choices: ['tail', 'init', '(4:)', '(++[4])'],
     collectAnswer: ['(++[4])', 'init'],
+    comment: '',
   },
   {
     title: '後ろを持ってくる',
@@ -56,6 +62,7 @@ export default [
     sheet: ['f = ■ ■'],
     choices: ['take', 'drop', '3', '2'],
     collectAnswer: ['drop', '3'],
+    comment: '',
   },
   {
     title: '後ろを持ってくる２',
@@ -64,6 +71,7 @@ export default [
     sheet: ['f = ■ ■'],
     choices: ['dropWhile', 'drop', '(<4)', '2'],
     collectAnswer: ['dropWhile', '(<4)'],
+    comment: '',
   },
   {
     title: '増殖',
@@ -72,6 +80,7 @@ export default [
     sheet: ['f = take 5 . ■ (\\x -> x*■ + 1)'],
     choices: ['iterate', 'repeat', '10', '11'],
     collectAnswer: ['iterate', '10'],
+    comment: '',
   },
   {
     title: '桁は三つまで',
@@ -80,5 +89,6 @@ export default [
     sheet: ['f = ■ ■'],
     choices: ['zip', 'take', '[0..]', '[0..2]'],
     collectAnswer: ['zip', '[0..2]'],
+    comment: '',
   },
 ] as StoredProblem[]

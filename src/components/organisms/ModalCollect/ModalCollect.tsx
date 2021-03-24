@@ -3,6 +3,7 @@ import React, { useMemo } from 'react'
 import { Modal } from '@/components/organisms/Modal'
 import { TextLink } from '@/components/atoms/TextLink'
 import { Check } from '@/components/atoms/Icons'
+import { TwitterShareBtn } from '@/components/atoms/TwitterShareBtn'
 import type { Problem } from '@/types'
 
 import styles from './ModalCollect.module.scss'
@@ -52,10 +53,12 @@ const ModalCollect: React.VFC<Pick<ModalCollectProps, 'problem'>> = ({
               </div>
             ))}
           </div>
-          <div>ああああああああああああ</div>
+          <div>{problem.comment}</div>
         </div>
         <div className={styles.foot}>
-          <button>tweet</button>
+          <TwitterShareBtn
+            text={`問題${problem.level}-${problem.id} に正解しました！`}
+          />
           <div className={styles.links}>
             <TextLink href="/">HOME</TextLink>
             <TextLink href={`/problem/${problem.level}/${problem.id + 1}`}>
