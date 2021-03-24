@@ -1,12 +1,58 @@
+@keyframes block {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    background-color: var(--green);
+    border-radius: 100%;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.7);
+    background-color: transparent;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(0.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .body {
   padding: 1rem;
   min-width: 700px;
   text-align: center;
 
   .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.75rem;
     color: var(--green);
     font-weight: bold;
+    .check {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 35px;
+        height: 35px;
+        animation: block 0.7s ease 0.1s forwards;
+      }
+      svg {
+        margin-right: 6px;
+        width: 2.5rem;
+        animation: scaleOut 0.4s ease forwards;
+      }
+    }
   }
 
   .main {
