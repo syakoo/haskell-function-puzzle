@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
-import Link from 'next/link'
 
 import { Modal } from '@/components/organisms/Modal'
+import { TextLink } from '@/components/atoms/TextLink'
 import type { Problem } from '@/types'
 
 import styles from './ModalCollect.module.scss'
@@ -41,20 +41,20 @@ const ModalCollect: React.VFC<Pick<ModalCollectProps, 'problem'>> = ({
         <div className={styles.main}>
           <div className={styles.answer}>
             {collectAnswer.map((ans, i) => (
-              <div className={styles.answerRow} key={`${i}:${ans}`}>{ans}</div>
+              <div className={styles.answerRow} key={`${i}:${ans}`}>
+                {ans}
+              </div>
             ))}
           </div>
           <div>ああああああああああああ</div>
         </div>
         <div className={styles.foot}>
           <button>tweet</button>
-          <div>
-            <Link href="/">
-              <a>HOME</a>
-            </Link>
-            <Link href={`/problem/${problem.level}/${problem.id + 1}`}>
-              <a>NEXT</a>
-            </Link>
+          <div className={styles.links}>
+            <TextLink href="/">HOME</TextLink>
+            <TextLink href={`/problem/${problem.level}/${problem.id + 1}`}>
+              NEXT
+            </TextLink>
           </div>
         </div>
       </div>
