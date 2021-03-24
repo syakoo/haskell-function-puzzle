@@ -1,0 +1,14 @@
+.link {
+  color: var(--secondary);
+  text-decoration: none;
+  margin: 0px 5px;
+
+  &:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}

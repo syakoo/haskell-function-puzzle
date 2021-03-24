@@ -8,6 +8,7 @@ export default [
     sheet: ['f = ■ $ ■ . ■'],
     choices: ['odd', 'even', 'length', 'map'],
     collectAnswer: ['map', 'even', 'length'],
+    comment: '',
   },
   {
     title: '',
@@ -19,6 +20,7 @@ export default [
     sheet: ['f = foldr (■ . ■) []'],
     choices: ['map', '(:)', '(++)', 'flip (:)', '(*2)'],
     collectAnswer: ['(:)', '(*2)'],
+    comment: '',
   },
   {
     title: 'True カウンター',
@@ -27,6 +29,7 @@ export default [
     sheet: ['f = ■ . ■ ■'],
     choices: ['id', 'filter', 'length', 'map'],
     collectAnswer: ['length', 'filter', 'id'],
+    comment: '',
   },
   {
     title: '',
@@ -38,5 +41,6 @@ export default [
     sheet: ['f = ■ (■) []'],
     choices: ['map', 'foldl', 'foldr', 'flip (:)', '(:)'],
     collectAnswer: ['foldl', 'flip (:)'],
+    comment: '',
   },
 ] as StoredProblem[]

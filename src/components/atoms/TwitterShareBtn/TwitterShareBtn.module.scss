@@ -1,0 +1,25 @@
+.btn {
+  background-color: #1D9BF0;
+  padding: 4px 6px;
+  border: 0px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.75rem;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  svg {
+    margin-right: 4px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.logo {
+  width: 1rem;
+  path {
+    fill: var(--white);
+  }
+}

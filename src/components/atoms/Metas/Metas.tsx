@@ -11,18 +11,18 @@ const Metas: React.VFC = () => {
       <title>Haskell Function Puzzle</title>
       <meta
         property="og:url"
-        content="https://syakoo.github.io/haskell-function-puzzle/"
+        content="https://haskell-function-puzzle.vercel.app/"
       />
       <meta property="og:title" content="Haskell Function Puzzle" />
       <meta
         property="og:image"
-        content="https://syakoo.github.io/haskell-function-puzzle/logo.png"
+        content="https://haskell-function-puzzle.vercel.app/logo.png"
       />
       <meta property="twitter:card" content="summary" />
       <meta property="twitter:title" content="Haskell Function Puzzle" />
       <meta
         property="twitter:image"
-        content="https://syakoo.github.io/haskell-function-puzzle/logo.png"
+        content="https://haskell-function-puzzle.vercel.app/logo.png"
       />
       <link
         rel="icon"

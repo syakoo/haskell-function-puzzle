@@ -11,6 +11,7 @@ export default [
     sheet: ['import Control.Monad', '', 'f = ■ (\\x -> ■)'],
     choices: ['filter', 'filterM', 'x <= 3', '[True, False]'],
     collectAnswer: ['filterM', '[True, False]'],
+    comment: '',
   },
   {
     title: '2進数？',
@@ -22,5 +23,6 @@ export default [
     sheet: ['f = ■ . ■ (*) (iterate (*2) 1) . reverse'],
     choices: ['zip', 'zipWith', 'product', 'sum'],
     collectAnswer: ['sum', 'zipWith'],
+    comment: '',
   },
 ] as StoredProblem[]

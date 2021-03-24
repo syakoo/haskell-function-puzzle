@@ -5,6 +5,7 @@ export type StoredProblem = {
   sheet: string[]
   choices: string[]
   collectAnswer: string[]
+  comment: string
 }
 
 export type Problem = StoredProblem & {
