@@ -1,0 +1,23 @@
+.body {
+  padding: 1rem;
+  min-width: 700px;
+  text-align: center;
+
+  .head {
+    font-size: 1.75rem;
+    color: var(--green);
+    font-weight: bold;
+  }
+
+  .main {
+    margin: 0.5rem 0px;
+  }
+
+  .answer {
+    font-size: 1.5rem;
+    margin: 0.5rem 0px;
+    .answerRow {
+      min-height: 1em;
+    }
+  }
+}

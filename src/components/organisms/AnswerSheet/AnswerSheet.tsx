@@ -9,6 +9,7 @@ import styles from './AnswerSheet.module.scss'
 type AnswerSheetProps = {
   collectAnswer: string[]
   sheet: string[]
+  setIsCollect: (isCollect: null | boolean) => void
 }
 
 const replaceAll = (text: string, from: string, to: string) => {
@@ -17,11 +18,14 @@ const replaceAll = (text: string, from: string, to: string) => {
 
 // ___________
 //
-const AnswerSheet: React.VFC<AnswerSheetProps> = ({ collectAnswer, sheet }) => {
+const AnswerSheet: React.VFC<AnswerSheetProps> = ({
+  collectAnswer,
+  sheet,
+  setIsCollect,
+}) => {
   const [ans, setAnswer] = useState<string[]>(
     Array.from({ length: collectAnswer.length }, () => '')
   )
-  const [isCollect, setIsCollect] = useState<boolean | null>(null)
 
   useEffect(() => {
     setAnswer(Array.from({ length: collectAnswer.length }, () => ''))
@@ -66,15 +70,7 @@ const AnswerSheet: React.VFC<AnswerSheetProps> = ({ collectAnswer, sheet }) => {
           </div>
         ))}
       </div>
-      <div className={styles.resultBox}>
-        {isCollect ? (
-          <div className={styles.collect}>Collect</div>
-        ) : isCollect === false ? (
-          <div className={styles.wrong}>Wrong</div>
-        ) : (
-          <></>
-        )}
-      </div>
+      <div className={styles.resultBox}></div>
     </div>
   )
 }
