@@ -7,7 +7,7 @@ export default [
     map: { from: '[1, 2, 3]', to: '[2, 3, 4]' },
     sheet: ['f = ■ ■'],
     choices: ['map', '(+1)', '(-1)'],
-    collectAnswer: ['map', '(+1)'],
+    correctAnswer: ['map', '(+1)'],
     comment: 'map で全ての要素をインクリメントします',
   },
   {
@@ -16,7 +16,7 @@ export default [
     map: { from: '[1, 2, 3]', to: '2' },
     sheet: ['f = ■ . ■'],
     choices: ['tail', 'head', 'reverse'],
-    collectAnswer: ['head', 'tail'],
+    correctAnswer: ['head', 'tail'],
     comment: '',
   },
   {
@@ -25,7 +25,7 @@ export default [
     map: { from: '[1, 2, 3]', to: '3' },
     sheet: ['f = ■ . ■'],
     choices: ['tail', 'head', 'reverse'],
-    collectAnswer: ['head', 'reverse'],
+    correctAnswer: ['head', 'reverse'],
     comment: '',
   },
   {
@@ -34,7 +34,7 @@ export default [
     map: { from: '3', to: '[1, 2, 3]' },
     sheet: ['f = ■ ■ [1..]'],
     choices: ['take', 'repeat', 'flip'],
-    collectAnswer: ['flip', 'take'],
+    correctAnswer: ['flip', 'take'],
     comment: '',
   },
   {
@@ -43,7 +43,7 @@ export default [
     map: { from: '["abc", "def"]', to: '["cba", "fed"]' },
     sheet: ['f = ■ ■'],
     choices: ['foldr', 'map', 'reverse'],
-    collectAnswer: ['map', 'reverse'],
+    correctAnswer: ['map', 'reverse'],
     comment: '',
   },
   {
@@ -52,7 +52,7 @@ export default [
     map: { from: '[1, 2, 3]', to: '[1, 2, 4]' },
     sheet: ['f = ■ . ■'],
     choices: ['tail', 'init', '(4:)', '(++[4])'],
-    collectAnswer: ['(++[4])', 'init'],
+    correctAnswer: ['(++[4])', 'init'],
     comment: '',
   },
   {
@@ -61,7 +61,7 @@ export default [
     map: { from: '[1, 2, 3, 4, 5]', to: '[4, 5]' },
     sheet: ['f = ■ ■'],
     choices: ['take', 'drop', '3', '2'],
-    collectAnswer: ['drop', '3'],
+    correctAnswer: ['drop', '3'],
     comment: '',
   },
   {
@@ -70,7 +70,7 @@ export default [
     map: { from: '[1, 2, 3, 4, 5]', to: '[4, 5]' },
     sheet: ['f = ■ ■'],
     choices: ['dropWhile', 'drop', '(<4)', '2'],
-    collectAnswer: ['dropWhile', '(<4)'],
+    correctAnswer: ['dropWhile', '(<4)'],
     comment: '',
   },
   {
@@ -79,7 +79,7 @@ export default [
     map: { from: '1', to: '[1, 11, 111, 1111, 11111]' },
     sheet: ['f = take 5 . ■ (\\x -> x*■ + 1)'],
     choices: ['iterate', 'repeat', '10', '11'],
-    collectAnswer: ['iterate', '10'],
+    correctAnswer: ['iterate', '10'],
     comment: '',
   },
   {
@@ -88,7 +88,7 @@ export default [
     map: { from: '[3, 1, 4, 1, 5]', to: '[(0, 3), (1, 1), (2, 4)]' },
     sheet: ['f = ■ ■'],
     choices: ['zip', 'take', '[0..]', '[0..2]'],
-    collectAnswer: ['zip', '[0..2]'],
+    correctAnswer: ['zip', '[0..2]'],
     comment: '',
   },
   {
@@ -97,7 +97,7 @@ export default [
     map: { from: '2', to: 'True' },
     sheet: ['f = (== ■) . (`mod` ■)'],
     choices: ['0', '1', '2', '3'],
-    collectAnswer: ['0', '2'],
+    correctAnswer: ['0', '2'],
     comment: 'f n = n `mod` 2 == 0 を変形させたものです',
   },
 ] as StoredProblem[]

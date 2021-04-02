@@ -7,9 +7,9 @@ import styles from './AnswerSheet.module.scss'
 // ___________
 //
 type AnswerSheetProps = {
-  collectAnswer: string[]
+  correctAnswer: string[]
   sheet: string[]
-  setIsCollect: (isCollect: null | boolean) => void
+  setIsCorrect: (isCorrect: null | boolean) => void
 }
 
 const replaceAll = (text: string, from: string, to: string) => {
@@ -19,30 +19,30 @@ const replaceAll = (text: string, from: string, to: string) => {
 // ___________
 //
 const AnswerSheet: React.VFC<AnswerSheetProps> = ({
-  collectAnswer,
+  correctAnswer,
   sheet,
-  setIsCollect,
+  setIsCorrect,
 }) => {
   const [ans, setAnswer] = useState<string[]>(
-    Array.from({ length: collectAnswer.length }, () => '')
+    Array.from({ length: correctAnswer.length }, () => '')
   )
 
   useEffect(() => {
-    setAnswer(Array.from({ length: collectAnswer.length }, () => ''))
-  }, [collectAnswer])
+    setAnswer(Array.from({ length: correctAnswer.length }, () => ''))
+  }, [correctAnswer])
 
   useEffect(() => {
     if (!ans.every((a) => !!a)) {
-      setIsCollect(null)
+      setIsCorrect(null)
       return
     }
 
-    if (ans.every((a, i) => a === collectAnswer[i])) {
-      setIsCollect(true)
+    if (ans.every((a, i) => a === correctAnswer[i])) {
+      setIsCorrect(true)
     } else {
-      setIsCollect(false)
+      setIsCorrect(false)
     }
-  }, [ans, collectAnswer])
+  }, [ans, correctAnswer])
 
   return (
     <div className={styles.answerSheet}>

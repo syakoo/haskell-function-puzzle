@@ -4,7 +4,7 @@ export type StoredProblem = {
   map: { from: string; to: string }
   sheet: string[]
   choices: string[]
-  collectAnswer: string[]
+  correctAnswer: string[]
   comment: string
 }
 
