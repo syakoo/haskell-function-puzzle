@@ -7,7 +7,7 @@ export default [
     map: { from: '1', to: '2' },
     sheet: ['f = ■'],
     choices: ['(+1)', '(*1)'],
-    collectAnswer: ['(+1)'],
+    correctAnswer: ['(+1)'],
     comment: 'インクリメントします',
   },
   {
@@ -16,7 +16,7 @@ export default [
     map: { from: '2', to: '1' },
     sheet: ['f = ■ 1'],
     choices: ['(-)', 'subtract'],
-    collectAnswer: ['subtract'],
+    correctAnswer: ['subtract'],
     comment: '(-) 1 だと、1 - x となってしまいます',
   },
   {
@@ -25,7 +25,7 @@ export default [
     map: { from: '-100', to: '100' },
     sheet: ['f = ■'],
     choices: ['abs', 'signum'],
-    collectAnswer: ['abs'],
+    correctAnswer: ['abs'],
     comment: 'abs は絶対値を取る関数です',
   },
   {
@@ -34,7 +34,7 @@ export default [
     map: { from: '123', to: '4' },
     sheet: ['f = (■ 7)'],
     choices: ['`div`', '`mod`', 'div', 'mod'],
-    collectAnswer: ['`mod`'],
+    correctAnswer: ['`mod`'],
     comment: 'mod 7 とすると 7 mod x になってしまいます',
   },
   {
@@ -43,7 +43,7 @@ export default [
     map: { from: '4', to: '2' },
     sheet: ['f = (■ 2)'],
     choices: ['`div`', '/'],
-    collectAnswer: ['`div`'],
+    correctAnswer: ['`div`'],
     comment: '(/) は Fractional クラスのメソッドです',
   },
   {
@@ -52,7 +52,7 @@ export default [
     map: { from: '4', to: 'True' },
     sheet: ['f = ■ . odd'],
     choices: ['not', 'id'],
-    collectAnswer: ['not'],
+    correctAnswer: ['not'],
     comment: 'not で真理値を反転することができます',
   },
   {
@@ -61,7 +61,7 @@ export default [
     map: { from: '-5', to: '1' },
     sheet: ['f = ■ 1'],
     choices: ['max', 'min'],
-    collectAnswer: ['max'],
+    correctAnswer: ['max'],
     comment: 'max で大きい方を取得できます',
   },
   {
@@ -70,7 +70,7 @@ export default [
     map: { from: '1', to: '2' },
     sheet: ['f = \\x -> x ■ x'],
     choices: ['+', '*'],
-    collectAnswer: ['+'],
+    correctAnswer: ['+'],
     comment: 'ラムダ式を用いた数字を倍にする関数です',
   },
   {
@@ -79,7 +79,7 @@ export default [
     map: { from: 'boll', to: 'aboll' },
     sheet: ['f = ■ \'a\''],
     choices: ['(:)', '(++)'],
-    collectAnswer: ['(:)'],
+    correctAnswer: ['(:)'],
     comment: '文字列の場合はリストの連結になるので (++) を使います',
   },
 ] as StoredProblem[]

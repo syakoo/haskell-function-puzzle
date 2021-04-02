@@ -7,7 +7,7 @@ export default [
     map: { from: '["odd", "even"]', to: '[False, True]' },
     sheet: ['f = ■ $ ■ . ■'],
     choices: ['odd', 'even', 'length', 'map'],
-    collectAnswer: ['map', 'even', 'length'],
+    correctAnswer: ['map', 'even', 'length'],
     comment: '',
   },
   {
@@ -19,7 +19,7 @@ export default [
     },
     sheet: ['f = foldr (■ . ■) []'],
     choices: ['map', '(:)', '(++)', 'flip (:)', '(*2)'],
-    collectAnswer: ['(:)', '(*2)'],
+    correctAnswer: ['(:)', '(*2)'],
     comment: '',
   },
   {
@@ -28,7 +28,7 @@ export default [
     map: { from: '[True, False, True]', to: '2' },
     sheet: ['f = ■ . ■ ■'],
     choices: ['id', 'filter', 'length', 'map'],
-    collectAnswer: ['length', 'filter', 'id'],
+    correctAnswer: ['length', 'filter', 'id'],
     comment: '',
   },
   {
@@ -40,7 +40,7 @@ export default [
     },
     sheet: ['f = ■ (■) []'],
     choices: ['map', 'foldl', 'foldr', 'flip (:)', '(:)'],
-    collectAnswer: ['foldl', 'flip (:)'],
+    correctAnswer: ['foldl', 'flip (:)'],
     comment: '',
   },
   {
@@ -52,7 +52,7 @@ export default [
     },
     sheet: ['import Control.Monad', '', 'f = ■ (\\x -> ■)'],
     choices: ['filter', 'filterM', 'x <= 3', '[True, False]'],
-    collectAnswer: ['filterM', '[True, False]'],
+    correctAnswer: ['filterM', '[True, False]'],
     comment: '',
   },
   {
@@ -64,7 +64,7 @@ export default [
     },
     sheet: ['f = ■ . ■ (*) (iterate (*2) 1) . reverse'],
     choices: ['zip', 'zipWith', 'product', 'sum'],
-    collectAnswer: ['sum', 'zipWith'],
+    correctAnswer: ['sum', 'zipWith'],
     comment: '',
   },
 ] as StoredProblem[]

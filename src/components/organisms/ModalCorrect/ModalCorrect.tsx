@@ -6,23 +6,23 @@ import { Check } from '@/components/atoms/Icons'
 import { TwitterShareBtn } from '@/components/atoms/TwitterShareBtn'
 import type { Problem } from '@/types'
 
-import styles from './ModalCollect.module.scss'
+import styles from './ModalCorrect.module.scss'
 
 // __________
 //
-type ModalCollectProps = {
+type ModalCorrectProps = {
   problem: Problem
-  isCollect: boolean
+  isCorrect: boolean
 }
 
 // __________
 //
-const ModalCollect: React.VFC<Pick<ModalCollectProps, 'problem'>> = ({
+const ModalCorrect: React.VFC<Pick<ModalCorrectProps, 'problem'>> = ({
   problem,
 }) => {
-  const collectAnswer = useMemo(() => {
+  const correctAnswer = useMemo(() => {
     const sheet = problem.sheet
-    const anss = problem.collectAnswer
+    const anss = problem.correctAnswer
     let i = 0
     return sheet.map((row) => {
       return row.split('■').reduce((prev, curr, idx) => {
@@ -43,11 +43,11 @@ const ModalCollect: React.VFC<Pick<ModalCollectProps, 'problem'>> = ({
           <div className={styles.check}>
             <Check strokeWidth={3} />
           </div>
-          Collect
+          Correct
         </div>
         <div className={styles.main}>
           <div className={styles.answer}>
-            {collectAnswer.map((ans, i) => (
+            {correctAnswer.map((ans, i) => (
               <div className={styles.answerRow} key={`${i}:${ans}`}>
                 {ans}
               </div>
@@ -73,8 +73,8 @@ const ModalCollect: React.VFC<Pick<ModalCollectProps, 'problem'>> = ({
 
 // __________
 //
-const Container: React.VFC<ModalCollectProps> = ({ problem, isCollect }) => (
-  <>{isCollect && <ModalCollect problem={problem} />}</>
+const Container: React.VFC<ModalCorrectProps> = ({ problem, isCorrect }) => (
+  <>{isCorrect && <ModalCorrect problem={problem} />}</>
 )
 
 export default Container

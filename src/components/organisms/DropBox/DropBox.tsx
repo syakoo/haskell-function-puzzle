@@ -18,7 +18,7 @@ const DropBox: React.VFC<DropBoxProps> = ({ ans, setAns }) => {
     drop: (item: { txt: string }) => {
       setAns(item.txt)
     },
-    collect: (monitor) => ({
+    correct: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
   }))

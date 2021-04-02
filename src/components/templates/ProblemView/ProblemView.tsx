@@ -4,7 +4,7 @@ import { MappingView } from '@/components/molecules/MappingView'
 import { NextBtns } from '@/components/molecules/NextBtns'
 import { Choice } from '@/components/organisms/Choice'
 import { AnswerSheet } from '@/components/organisms/AnswerSheet'
-import { ModalCollect } from '@/components/organisms/ModalCollect'
+import { ModalCorrect } from '@/components/organisms/ModalCorrect'
 
 import type { Problem } from '@/types'
 
@@ -19,7 +19,7 @@ type ProblemViewProps = {
 // __________
 //
 const ProblemView: React.VFC<ProblemViewProps> = ({ problem }) => {
-  const [isCollect, setIsCollect] = useState<null | boolean>(null)
+  const [isCorrect, setIsCorrect] = useState<null | boolean>(null)
 
   return (
     <section key={`${problem.level}${problem.id}`}>
@@ -34,9 +34,9 @@ const ProblemView: React.VFC<ProblemViewProps> = ({ problem }) => {
         <MappingView from={problem.map.from} to={problem.map.to} />
       </div>
       <AnswerSheet
-        collectAnswer={problem.collectAnswer}
+        correctAnswer={problem.correctAnswer}
         sheet={problem.sheet}
-        setIsCollect={setIsCollect}
+        setIsCorrect={setIsCorrect}
       />
       <div className={styles.choices}>
         {problem.choices.map((txt) => (
@@ -48,7 +48,7 @@ const ProblemView: React.VFC<ProblemViewProps> = ({ problem }) => {
       <div className={styles.marginTop}>
         <NextBtns level={problem.level} id={problem.id} />
       </div>
-      <ModalCollect problem={problem} isCollect={isCollect || false} />
+      <ModalCorrect problem={problem} isCorrect={isCorrect || false} />
     </section>
   )
 }
