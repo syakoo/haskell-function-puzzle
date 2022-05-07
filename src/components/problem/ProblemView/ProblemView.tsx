@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { MappingView } from '@/components/problem/MappingView'
 import { NextBtns } from '@/components/problem/NextBtns'
-import { Choice } from '@/components/dragAndDrop/Choice'
+import { WordDragBox } from '@/components/dragAndDrop/WordDnD'
 import { AnswerSheet } from '@/components/problem/AnswerSheet'
 import { ModalCorrect } from '@/components/problem/ModalCorrect'
 
@@ -41,7 +41,7 @@ const ProblemView: React.VFC<ProblemViewProps> = ({ problem }) => {
       <div className={styles.choices}>
         {problem.choices.map((txt) => (
           <div className={styles.space} key={txt}>
-            <Choice txt={txt} />
+            <WordDragBox txt={txt} />
           </div>
         ))}
       </div>

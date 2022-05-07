@@ -2,19 +2,20 @@ import React from 'react'
 
 import { useDrag } from 'react-dnd'
 
-import styles from './Choice.module.scss'
+import { WORD_DND_ACCEPT_KEY } from './helper'
+import styles from './WordDragBox.module.scss'
 
 // ___________
 //
-type ChoiceProps = {
+type WordChoiceBoxProps = {
   txt: string
 }
 
 // ___________
 //
-const Choice: React.VFC<ChoiceProps> = ({ txt }) => {
+const WordChoiceBox: React.VFC<WordChoiceBoxProps> = ({ txt }) => {
   const [, dragRef] = useDrag(() => ({
-    type: 'CHOICE',
+    type: WORD_DND_ACCEPT_KEY,
     item: { txt },
   }))
 
@@ -25,4 +26,4 @@ const Choice: React.VFC<ChoiceProps> = ({ txt }) => {
   )
 }
 
-export default React.memo(Choice)
+export default React.memo(WordChoiceBox)

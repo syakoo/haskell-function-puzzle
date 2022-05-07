@@ -1,6 +1,6 @@
 import React, { useState, Fragment, useEffect } from 'react'
 
-import { DropBox } from '@/components/dragAndDrop/DropBox'
+import { WordDropBox } from '@/components/dragAndDrop/WordDnD'
 
 import styles from './AnswerSheet.module.scss'
 
@@ -55,7 +55,7 @@ const AnswerSheet: React.VFC<AnswerSheetProps> = ({
                 <Fragment key={`${i}${s}`}>
                   <div>{s}</div>
                   {i < r.split('■').length - 1 && (
-                    <DropBox
+                    <WordDropBox
                       ans={ans[i]}
                       setAns={(a) =>
                         setAnswer((pre) => {
