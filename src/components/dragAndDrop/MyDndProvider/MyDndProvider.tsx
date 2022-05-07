@@ -13,6 +13,7 @@ const MyDndProvider: React.FC = ({ children }) => {
     }
     return false
   }, [])
+
   return (
     <DndProvider backend={isTouchable ? TouchBackend : HTML5Backend}>
       {children}

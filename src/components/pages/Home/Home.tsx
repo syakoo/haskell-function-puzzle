@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ProblemList } from '@/components/molecules/ProblemList'
+import { ProblemList } from '@/components/problem/ProblemList'
 
 import styles from './Home.module.scss'
 

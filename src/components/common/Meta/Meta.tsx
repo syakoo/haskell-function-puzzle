@@ -3,7 +3,7 @@ import React from 'react'
 
 // __________
 //
-const Metas: React.VFC = () => {
+const Meta: React.VFC = () => {
   return (
     <Head>
       <meta charSet="utf-8" />
@@ -32,4 +32,4 @@ const Metas: React.VFC = () => {
   )
 }
 
-export default Metas
+export default Meta

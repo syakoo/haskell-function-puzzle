@@ -1,7 +1,7 @@
 import React from 'react'
 import { NextPage } from 'next'
 
-import { NotFound } from '@/components/templates/NotFound'
+import { NotFound } from '@/components/pages/Error/NotFound'
 
 // __________
 //

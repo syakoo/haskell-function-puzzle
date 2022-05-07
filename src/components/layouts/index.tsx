@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Header } from '@/components/templates/Header'
-import { Footer } from '@/components/templates/Footer'
+import { Header } from '@/components/common/Header'
+import { Footer } from '@/components/common/Footer'
 
 import styles from './Layout.module.scss'
 

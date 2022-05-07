@@ -1,7 +1,8 @@
 import React from 'react'
 import { useDrop } from 'react-dnd'
 
-import styles from './DropBox.module.scss'
+import styles from './WordDropBox.module.scss'
+import { WORD_DND_ACCEPT_KEY } from './helper'
 
 // ___________
 //
@@ -14,7 +15,7 @@ type DropBoxProps = {
 //
 const DropBox: React.VFC<DropBoxProps> = ({ ans, setAns }) => {
   const [{ isOver }, dropRef] = useDrop(() => ({
-    accept: 'CHOICE',
+    accept: WORD_DND_ACCEPT_KEY,
     drop: (item: { txt: string }) => {
       setAns(item.txt)
     },
@@ -27,8 +28,8 @@ const DropBox: React.VFC<DropBoxProps> = ({ ans, setAns }) => {
     <div
       ref={dropRef}
       className={styles.dropBox}
-      data-isover={isOver}
-      data-isdropped={!!ans}
+      data-is-over={isOver}
+      data-is-dropped={!!ans}
     >
       {ans}
     </div>
