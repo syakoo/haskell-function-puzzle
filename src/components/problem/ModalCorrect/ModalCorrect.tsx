@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react'
 
-import { Modal } from '@/components/organisms/Modal'
-import { TextLink } from '@/components/atoms/TextLink'
-import { Check } from '@/components/atoms/Icons'
-import { TwitterShareBtn } from '@/components/atoms/TwitterShareBtn'
+import { Modal } from '@/components/ui/Modal'
+import { TextLink } from '@/components/ui/TextLink'
+import { Check } from '@/components/ui/Icons'
+import { TwitterShareBtn } from '@/components/common/TwitterShareBtn'
 import type { Problem } from '@/types'
 
 import styles from './ModalCorrect.module.scss'

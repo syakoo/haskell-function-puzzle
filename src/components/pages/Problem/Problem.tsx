@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { ProblemView } from '@/components/templates/ProblemView'
-import { MyDndProvider } from '@/components/templates/MyDndProvider'
+import { ProblemView } from '@/components/problem/ProblemView'
+import { MyDndProvider } from '@/components/dragAndDrop/MyDndProvider'
 import { Problem } from '@/types'
 
 // ___________

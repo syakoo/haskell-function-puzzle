@@ -1,6 +1,6 @@
 import React, { useState, Fragment, useEffect } from 'react'
 
-import { DropBox } from '@/components/organisms/DropBox'
+import { DropBox } from '@/components/dragAndDrop/DropBox'
 
 import styles from './AnswerSheet.module.scss'
 

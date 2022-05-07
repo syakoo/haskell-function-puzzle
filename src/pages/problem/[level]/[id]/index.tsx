@@ -3,7 +3,7 @@ import { NextPage, GetStaticProps, GetStaticPaths } from 'next'
 import dynamic from 'next/dynamic'
 
 import { fetchProblemsAll, fetchProblem } from '@/problems'
-import { Metas } from '@/components/atoms/Metas'
+import { Metas } from '@/components/ui/Metas'
 import type { Problem } from '@/types'
 const ProblemPageComponent = dynamic(
   () => import('@/components/pages/Problem/Problem'),

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-import { MappingView } from '@/components/molecules/MappingView'
-import { NextBtns } from '@/components/molecules/NextBtns'
-import { Choice } from '@/components/organisms/Choice'
-import { AnswerSheet } from '@/components/organisms/AnswerSheet'
-import { ModalCorrect } from '@/components/organisms/ModalCorrect'
+import { MappingView } from '@/components/problem/MappingView'
+import { NextBtns } from '@/components/problem/NextBtns'
+import { Choice } from '@/components/dragAndDrop/Choice'
+import { AnswerSheet } from '@/components/problem/AnswerSheet'
+import { ModalCorrect } from '@/components/problem/ModalCorrect'
 
 import type { Problem } from '@/types'
 

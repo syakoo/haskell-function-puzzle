@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { GitHubLink } from '@/components/atoms/GitHubLink'
+import { GitHubLink } from '@/components/common/GitHubLink'
 
 import styles from './Footer.module.scss'
 

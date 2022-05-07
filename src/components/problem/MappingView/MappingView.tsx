@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Arrow } from '@/components/atoms/Icons'
+import { Arrow } from '@/components/ui/Icons'
 
 import styles from './MappingView.module.scss'
 
